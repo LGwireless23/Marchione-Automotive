@@ -1,0 +1,200 @@
+body {
+	font-size: 16px;
+	color: #fff;
+	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
+}
+
+/* NAVBAR START */
+
+#logo {
+	max-height: 50px;
+}
+
+/* NAVBAR END */
+
+/* MAIN START */
+
+.location-hours {
+	color: black;
+	padding: 30px 20px;
+	font-size: .9rem;
+}
+
+.services p {
+	padding-right: 20px;
+}
+
+.services-header {
+	font-size: 1.4rem;
+	padding: 0 0 10px 0;
+}
+
+.services {
+	color: #000;
+	background-color: #ededed;
+	font-size: 1rem;
+	padding: 20px 0px 0px 20px;
+}
+
+.contact-us-header {
+	color: #000;
+	font-size: 1.4rem;
+	padding: 10px 0 10px 10px;
+}
+
+.bi-telephone, .bi-envelope, .bi-calendar-event {
+	color: #000;
+	height: 2.5rem;
+	width: 2.5rem;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 3px;
+}
+
+#phone-lg, #email-lg, #schedule-lg {
+	color: #000;
+	font-size: 1.2rem;
+	padding: 5px .4rem;
+}
+
+#phone-lg:hover, #email-lg:hover, #schedule-lg:hover {
+	text-decoration: none;
+	color: #000;
+	cursor: pointer;
+}
+
+.map-frame {
+	margin-top: 60px;
+}
+
+
+.map-content {
+	width: 100%;
+	height: 300px;
+}
+
+.reviews {
+	color: black;
+}
+
+.review-name {
+	font-weight: 700;
+	margin-bottom: 2px;
+	margin-top: 40px;
+}
+
+.review-location {
+	font-weight: 400;
+}
+
+.stars-container {
+	vertical-align: center;
+}
+
+.stars {
+	vertical-align: 2px;
+}
+
+.review-date {
+	font-weight: 400;
+}
+
+.review-content {
+	font-size: .9rem;
+}
+
+/* MAIN END */
+
+/* FOOTER START */
+
+.bi-facebook, .bi-instagram, .bi-yelp {
+	color: #000;
+	height: 2.5rem;
+	width: 2.5rem;
+	margin-top: 50px;
+	margin-bottom: 60px;
+}
+
+.footer {
+	background-color: #ededed;
+	margin-top: 50px;
+}
+
+.footer-contact {
+	color: #363737;
+	text-align: center;
+}
+
+.copyright {
+	color: #adadad;
+	background-color: #ededed;
+	font-size: .9rem;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+/* FOOTER END */
+
+/******** Large Devices Only *********/
+@media (min-width: 1200px) {}
+
+
+
+
+/******** Medium Devices Only *********/
+@media (min-width: 992px) {
+	.location-hours {
+		margin-top: 10px;
+		font-size: 1.03rem;
+	}
+
+	.services {
+		background-color: #fff;
+		margin-top: 18px;
+	}
+
+	.contact-us-header {
+		margin-top: 15px;
+	}
+
+
+
+
+
+
+
+}
+
+/******** Small Devices Only *********/
+@media (min-width: 768px) and (max-width: 991px) {
+
+	/* Home Page */
+
+
+	/* End Home Page */
+}
+
+/******** Extra Small Devices Only *********/
+@media (max-width: 767px) {
+
+	/* Header */
+
+	/* End Home Page */
+
+	/*Single Category Page */
+
+}
+
+/******** Super Extra Small Devices Only (iPhone 4) *********/
+@media (max-width: 479px) {
+
+	/* Header */
+
+
+	/* End Header */
+
+	/* Home Page */
+
+}
