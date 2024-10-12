@@ -129,6 +129,14 @@ body {
 	}
 }
 
+@media (min-width: 1200px) {
+	.row-container {
+		margin-top: 10px 0 0 0;
+		padding: 20px 10px 10px 10px;
+		background-color: #fff;
+	}
+}
+
 .map-frame {
 	margin-top: 60px;
 }
