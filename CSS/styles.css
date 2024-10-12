@@ -46,7 +46,7 @@ body {
 
 .row-container {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 }
 
 .bi-telephone, .bi-envelope, .bi-calendar-event {
@@ -55,7 +55,7 @@ body {
 	margin-top: 2px;
 	margin-bottom: 2px;
 	margin-right: 3px;
-	color: #000;
+	color: #514e4c;
 }
 
 .phone, .envelope, .schedule {
@@ -80,14 +80,14 @@ body {
 	.contact-us-phone, .general-questions, .schedule-appointment {
 		margin: 0 30px;
 		padding: 2px 10px;
-		border: 1px solid darkgrey;
+		border: 1px solid #514e4c;
 		border-radius: 15px;
 		transition: background-color 0.3s ease, color 0.3s ease;
 	}
 
 	.contact-us-phone:hover, .general-questions:hover, .schedule-appointment:hover {
-		background-color: darkgrey;
-		border: 1px solid darkgrey;
+		background-color: #514e4c;
+		border: 1px solid #514e4c;
 		color: #fff !important;
 
 	}
@@ -96,7 +96,7 @@ body {
 		display: inline-flex;
 		align-items: center;
 		text-decoration: none;
-		color: #000;
+		color: #514e4c;
 		transition: color 0.3s ease;
 		font-size: 1rem;
 		padding: 5px .4rem;
@@ -108,13 +108,13 @@ body {
 	#phone-lg svg, #email-lg svg, #schedule-lg svg {
 		vertical-align: middle;
 		margin-right: 8px;
-		color: #000;
+		color: #514e4c;
 		transition: color 0.3s ease;
 	}
 
 	#phone-lg span, #email-lg span, #schedule-lg span {
 		vertical-align: middle;
-		color: #000;
+		color: #514e4c;
 		transition: color 0.3s ease;
 	}
 
