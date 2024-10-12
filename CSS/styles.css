@@ -44,25 +44,83 @@ body {
 	padding: 10px 0 10px 10px;
 }
 
+.row-container {
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 30px;
+	margin-bottom: 40px;
+}
+
 .bi-telephone, .bi-envelope, .bi-calendar-event {
-	color: #000;
 	height: 2.5rem;
 	width: 2.5rem;
 	margin-top: 2px;
 	margin-bottom: 2px;
 	margin-right: 3px;
+	color: #000;
 }
 
-#phone-lg, #email-lg, #schedule-lg {
-	color: #000;
-	font-size: 1.2rem;
-	padding: 5px .4rem;
+.phone, .envelope, .schedule {
+	margin: 0 30px;
 }
 
-#phone-lg:hover, #email-lg:hover, #schedule-lg:hover {
-	text-decoration: none;
-	color: #000;
-	cursor: pointer;
+@media (min-width: 992px) {
+	.bi-telephone, .bi-envelope, .bi-calendar-event {
+		height: 2rem;
+		width: 2rem;
+		margin-top: 2px;
+		margin-bottom: 2px;
+		margin-right: 3px;
+	}
+
+	.contact-us-phone, .general-questions, .schedule-appointment {
+		margin: 0 30px;
+		padding: 3px 10px;
+		border: 1px solid #3B71CA;
+		border-radius: 15px;
+		transition: background-color 0.3s ease, color 0.3s ease;
+	}
+
+	.contact-us-phone:hover, .general-questions:hover, .schedule-appointment:hover {
+		background-color: #3B71CA;
+		color: #fff !important;
+	}
+
+	#phone-lg, #email-lg, #schedule-lg {
+		display: inline-flex;
+		align-items: center;
+		text-decoration: none;
+		color: #3B71CA;
+		transition: color 0.3s ease;
+		font-size: 1rem;
+		padding: 5px .4rem;
+		justify-content: center;
+		text-align: center;
+		width: 230px;
+	}
+
+	#phone-lg svg, #email-lg svg, #schedule-lg svg {
+		vertical-align: middle;
+		margin-right: 8px;
+		color: #3B71CA;
+		transition: color 0.3s ease;
+	}
+
+	#phone-lg span, #email-lg span, #schedule-lg span {
+		vertical-align: middle;
+		color: #3B71CA;
+		transition: color 0.3s ease;
+	}
+
+	#phone-lg:hover, #email-lg:hover, #schedule-lg:hover {
+		text-decoration: none;
+		color: #fff;
+		cursor: pointer;
+	}
+
+	#phone-lg:hover svg, #email-lg:hover svg, #schedule-lg:hover svg, #phone-lg:hover span, #email-lg:hover span, #schedule-lg:hover span {
+		color: #fff;
+	}
 }
 
 .map-frame {
