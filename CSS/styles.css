@@ -59,7 +59,31 @@ body {
 }
 
 .phone, .envelope, .schedule {
-	margin: 0 30px;
+	margin: 0 17px;
+}
+
+@media (min-width: 375px) {
+	.phone, .envelope, .schedule {
+		margin: 10px 23px;
+	}
+}
+
+@media (min-width: 475px) {
+	.phone, .envelope, .schedule {
+		margin: 15px 32px 0 32px;
+	}
+}
+
+@media (min-width: 575px) {
+	.phone, .envelope, .schedule {
+		margin: 15px 40px 0 40px;
+	}
+}
+
+@media (min-width: 675px) {
+	.phone, .envelope, .schedule {
+		margin: 15px 50px 0 50px;
+	}
 }
 
 @media (min-width: 992px) {
@@ -102,7 +126,7 @@ body {
 		padding: 5px .4rem;
 		justify-content: center;
 		text-align: center;
-		width: 240px;
+		width: 236px;
 	}
 
 	#phone-lg svg, #email-lg svg, #schedule-lg svg {
