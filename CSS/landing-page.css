@@ -47,9 +47,9 @@ body {
 	left: 0;
 	top: 0;
 	width: 100%;
-	z-index: 1100;
+	z-index: 1000;
 	background-color: var(--nav-solid);
-	transition: background-color 0.28s ease, top 0.12s ease;
+	transition: background-color 0.3s;
 	box-shadow: none;
 }
 
