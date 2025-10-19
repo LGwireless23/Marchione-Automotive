@@ -49,8 +49,11 @@ body {
 	width: 100%;
 	z-index: 1000;
 	background-color: var(--nav-solid);
-	transition: background-color 0.3s;
 	box-shadow: none;
+}
+
+.navbar-nav.scrolled {
+	background-color: var(--nav-solid);
 }
 
 /* nav container keeps content centered */
@@ -299,10 +302,13 @@ a {
 	/* nav becomes horizontal and transparent until scrolled */
 	.navbar-nav {
 		background-color: var(--nav-trans);
+		transition: background-color 0.3s ease, box-shadow 0.3s ease;
 	}
 
 	.navbar-nav.scrolled {
 		background-color: var(--nav-solid);
+		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+		z-index: 1000;
 	}
 
 	.nav-links {
@@ -322,12 +328,6 @@ a {
 		opacity: 1;
 		transform: none;
 		pointer-events: auto;
-	}
-
-	.navbar-nav.scrolled {
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-		transition: box-shadow 0.3s ease;
-		z-index: 1000;
 	}
 
 	.nav-links a {
