@@ -6,6 +6,7 @@
 	/* page background */
 	--muted: #8e8f98;
 	--nav-trans: rgba(153, 153, 155, 0.3);
+	--nav-links-trans: rgba(251, 252, 255, 0.88);
 	--nav-solid: rgba(251, 252, 255, 1);
 	--nav-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	--logo-height: 50px;
@@ -90,7 +91,9 @@ body {
 	align-items: flex-start;
 	gap: 0.5rem;
 	padding: 1rem 1.25rem;
-	background-color: var(--bg);
+	background-color: var(--nav-links-trans);
+	backdrop-filter: blur(12px);
+	-webkit-backdrop-filter: blur(12px);
 	border-top: none;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 	opacity: 0;
@@ -115,7 +118,7 @@ body {
 	pointer-events: none;
 }
 
-/* nav link styling (mobile) */
+/* nav link styling */
 .nav-links a {
 	color: var(--brand-dark);
 	text-decoration: none;
@@ -145,7 +148,6 @@ body {
 	border: none;
 	cursor: pointer;
 	z-index: 1300;
-	/* above dropdown */
 }
 
 /* focus style (accessible) */
