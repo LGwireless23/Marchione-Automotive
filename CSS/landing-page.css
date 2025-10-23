@@ -1,6 +1,6 @@
 /* ---------- :root / variables ---------- */
 :root {
-	--brand-dark: #1D234D;
+	--brand-dark: #14172E;
 	/* primary */
 	--bg: #FBFCFF;
 	/* page background */
@@ -221,6 +221,47 @@ body {
 }
 
 /* ---------- CONTENT (mobile stacking) ---------- */
+
+.intro {
+	color: var(--brand-dark);
+	padding: 1.25rem;
+	font-size: 1rem;
+	max-width: 1250px;
+	margin: 3rem auto 0 auto;
+	gap: 2rem;
+}
+
+.intro-container {
+	width: 100%;
+	max-width: 100%;
+}
+
+.years-serving-heading {
+	font-size: clamp(1.5rem, 4vw, 2rem);
+	margin-bottom: 1rem;
+	line-height: 1.2;
+}
+
+.years-serving-body {
+	font-size: clamp(0.9rem, 2vw, 1.1rem);
+	line-height: 1.6;
+}
+
+.years-serving-body p {
+	margin-bottom: 1rem;
+}
+
+.years-serving-body p:last-child {
+	margin-bottom: 0;
+}
+
+.map-frame {
+	display: none;
+}
+
+
+
+
 .services {
 	color: #000;
 	background-color: #ededed;
@@ -372,6 +413,30 @@ a {
 	.hero {
 		margin-top: -35px;
 	}
+
+	.intro {
+		padding: 2.5rem;
+		display: flex;
+		align-items: flex-start;
+	}
+
+	.intro-container {
+		flex: 1;
+		max-width: 70ch;
+	}
+
+	.map-frame {
+		display: block;
+		flex: 1;
+		min-width: 300px;
+	}
+
+	.map-content {
+		width: 100%;
+		height: 450px;
+		border-radius: 8px;
+		/* Optional: rounded corners */
+	}
 }
 
 /* ------ desktop (≥992px) ------ */
@@ -416,6 +481,11 @@ a {
 
 	#hero2 {
 		display: none;
+	}
+
+	.intro {
+		padding: 2.5rem 3rem;
+		gap: 5rem;
 	}
 }
 
