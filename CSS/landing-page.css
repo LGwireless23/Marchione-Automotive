@@ -1,15 +1,14 @@
 /* ---------- :root / variables ---------- */
 :root {
 	--brand-dark: #14172E;
-	/* primary */
 	--bg: #FBFCFF;
-	/* page background */
 	--muted: #8e8f98;
 	--nav-trans: rgba(153, 153, 155, 0.3);
 	--nav-links-trans: rgba(251, 252, 255, 0.88);
 	--nav-solid: rgba(251, 252, 255, 1);
 	--nav-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 	--logo-height: 50px;
+	--serv-svg: #3c4bc2;
 }
 
 /* ---------- Reset & base ---------- */
@@ -318,7 +317,7 @@ body {
 	gap: .5rem;
 	color: inherit;
 	max-width: 350px;
-	min-height: 250px;
+	min-height: 270px;
 	width: 100%;
 	margin: 0 auto;
 }
@@ -332,7 +331,7 @@ body {
 	width: 48px;
 	height: 48px;
 	margin-bottom: 1rem;
-	color: var(--brand-dark);
+	color: var(--serv-svg);
 }
 
 .services-item h3 {
@@ -347,42 +346,141 @@ body {
 	text-decoration: none;
 }
 
-
-
-
-.location-hours {
-	color: #000;
-	padding: 20px;
-	font-size: .95rem;
-}
-
-/* Contact blocks / icons (mobile stacking) */
-.row-container {
-	display: flex;
-	justify-content: center;
-	gap: 1rem;
-	flex-wrap: wrap;
-	padding: 12px 0;
-}
-
-.phone, .envelope, .schedule {
-	display: flex;
-	align-items: center;
-	gap: .5rem;
-	margin: 6px 8px;
-}
-
-/* reviews and footer default stacking */
 .reviews {
-	color: #000;
-	padding: 12px 0;
+	color: var(--brand-dark);
+	padding: 1.25rem;
+	font-size: 1rem;
+	max-width: 1250px;
+	margin: 1rem auto 0 auto;
+
+	/* fade-in animation */
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
-.footer {
-	background: #ededed;
-	padding: 24px 0 40px;
-	margin-top: 30px;
+/* when section comes into view */
+.reviews.fade-in {
+	opacity: 1;
+	transform: translateY(0)
 }
+
+.reviews-heading {
+	font-size: clamp(1.8rem, 4vw, 2rem);
+	margin-bottom: 1.5rem;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.reviews-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	width: 100%;
+	align-items: start;
+}
+
+.review-item {
+	background: var(--bg);
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	text-align: left;
+	text-decoration: none !important;
+	gap: .5rem;
+	color: inherit;
+	width: 100%;
+	margin: 0 auto;
+	color: var(--brand-dark);
+}
+
+.review-item.expanded {
+	height: auto;
+}
+
+.review-rating-row {
+	display: flex;
+	align-items: flex-start;
+	gap: .7rem;
+	width: 100%;
+}
+
+.review-item svg {
+	width: 120px;
+	height: auto;
+	flex-shrink: 0;
+	display: block;
+	margin-left: -1px;
+}
+
+.review-name {
+	font-size: 0.9rem;
+	font-weight: 700;
+}
+
+.review-location {
+	font-size: 0.9rem;
+	color: #666;
+}
+
+.review-date {
+	font-size: 0.9rem;
+	color: #999;
+	padding-top: 1.5px;
+}
+
+.review-text {
+	text-align: left;
+	line-height: 1.6;
+	font-size: 1rem;
+	margin: 0;
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 4;
+	/* Show only 4 lines */
+	-webkit-box-orient: vertical;
+	transition: all 0.3s ease;
+}
+
+/* When expanded, show full text */
+.review-item.expanded .review-text {
+	display: block;
+	-webkit-line-clamp: unset;
+}
+
+.read-more-btn {
+	background: none;
+	border: none;
+	color: var(--brand-dark);
+	font-size: 1rem;
+	cursor: pointer;
+	padding: 0;
+	font-size: 0.9rem;
+	font-weight: 500;
+	margin-top: auto;
+	/* Push to bottom */
+	align-self: flex-start;
+	text-decoration: none;
+	transition: color 0.2s ease;
+}
+
+.read-more-btn:hover {
+	color: var(--muted);
+}
+
+/* Hide button when expanded */
+.review-item.expanded .read-more-btn {
+	display: none;
+}
+
+
+
+
 
 /* ---------- Accessibility & small helpers ---------- */
 img {
@@ -536,6 +634,21 @@ a {
 		grid-template-columns: repeat(2, 1fr);
 		gap: 2rem;
 	}
+
+	.reviews {
+		padding: 2.5rem;
+	}
+
+	.reviews-container {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
+	}
+
+	.review-item:nth-child(3):last-child {
+		/* Span across both columns */
+		grid-column: 1 / -1;
+		justify-self: center;
+	}
 }
 
 /* ------ desktop (≥992px) ------ */
@@ -599,6 +712,19 @@ a {
 
 	.services-container {
 		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.reviews {
+		padding: 3rem 2.5rem;
+	}
+
+	.reviews-container {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.review-item:nth-child(3):last-child {
+		grid-column: auto;
+		justify-self: auto;
 	}
 }
 

@@ -57,7 +57,27 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe both intro and services sections
-const sectionsToAnimate = document.querySelectorAll('.intro, .services');
+const sectionsToAnimate = document.querySelectorAll('.intro, .services, .reviews');
 sectionsToAnimate.forEach(section => {
     observer.observe(section);
 });
+
+// Read More Button //
+document.addEventListener('DOMContentLoaded', () => {
+    // Handle read more buttons
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+
+    readMoreButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            const reviewItem = button.closest('.review-item');
+            reviewItem.classList.add('expanded');
+        });
+    });
+
+    // Your existing scroll animation code
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+}); 
