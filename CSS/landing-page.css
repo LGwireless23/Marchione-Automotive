@@ -227,8 +227,19 @@ body {
 	padding: 1.25rem;
 	font-size: 1rem;
 	max-width: 1250px;
-	margin: 3rem auto 0 auto;
+	margin: 1rem auto 0 auto;
 	gap: 2rem;
+
+	/* Fade-in animation setup */
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When section comes into view */
+.intro.fade-in {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 .intro-container {
@@ -237,13 +248,13 @@ body {
 }
 
 .years-serving-heading {
-	font-size: clamp(1.5rem, 4vw, 2rem);
+	font-size: clamp(1.8rem, 4vw, 2rem);
 	margin-bottom: 1rem;
 	line-height: 1.2;
 }
 
 .years-serving-body {
-	font-size: clamp(0.9rem, 2vw, 1.1rem);
+	font-size: clamp(0.95rem, 2vw, 1.1rem);
 	line-height: 1.6;
 }
 
@@ -259,15 +270,85 @@ body {
 	display: none;
 }
 
-
-
-
 .services {
-	color: #000;
-	background-color: #ededed;
-	padding: 20px;
+	color: var(--brand-dark);
+	padding: 1.25rem;
 	font-size: 1rem;
+	max-width: 1250px;
+	margin: 1rem auto 0 auto;
+
+	/* fade-in animation */
+	opacity: 0;
+	transform: translateY(30px);
+	transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
+/* when secction comes into view */
+.services.fade-in {
+	opacity: 1;
+	transform: translateY(0)
+}
+
+.services-heading {
+	font-size: clamp(1.8rem, 4vw, 2rem);
+	margin-bottom: 1.5rem;
+	line-height: 1.2;
+	text-align: center;
+}
+
+.services-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.services-item {
+	background: var(--bg);
+	padding: 2rem;
+	border-radius: 8px;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+	transition: box-shadow 0.3s ease, transform 0.3s ease;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	text-decoration: none !important;
+	gap: .5rem;
+	color: inherit;
+	max-width: 350px;
+	min-height: 250px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.services-item:hover {
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+	transform: translateY(-4px);
+}
+
+.services-item svg {
+	width: 48px;
+	height: 48px;
+	margin-bottom: 1rem;
+	color: var(--brand-dark);
+}
+
+.services-item h3 {
+	font-size: clamp(1.5rem, 2vw, 1.65rem);
+	line-height: 1.4;
+	margin: 0;
+	text-decoration: none;
+}
+
+.services-item:hover h3 {
+	color: var(--brand-dark);
+	text-decoration: none;
+}
+
+
+
 
 .location-hours {
 	color: #000;
@@ -418,24 +499,42 @@ a {
 		padding: 2.5rem;
 		display: flex;
 		align-items: flex-start;
+		margin-top: 2rem;
 	}
 
 	.intro-container {
 		flex: 1;
+		display: flex;
+		flex-direction: column;
+	}
+
+	.years-serving-body {
 		max-width: 70ch;
 	}
 
 	.map-frame {
-		display: block;
+		display: flex;
 		flex: 1;
 		min-width: 300px;
+		align-self: stretch;
+		justify-content: flex-end;
 	}
 
 	.map-content {
 		width: 100%;
-		height: 450px;
+		height: 100%;
+		min-height: 400px;
 		border-radius: 8px;
 		/* Optional: rounded corners */
+	}
+
+	.services {
+		padding: 2.5rem;
+	}
+
+	.services-container {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 2rem;
 	}
 }
 
@@ -485,7 +584,21 @@ a {
 
 	.intro {
 		padding: 2.5rem 3rem;
-		gap: 5rem;
+		gap: 3rem;
+		margin-top: 3rem;
+	}
+
+	.map-content {
+		min-height: 400px;
+		max-width: 90%;
+	}
+
+	.services {
+		padding: 3rem 2.5rem;
+	}
+
+	.services-container {
+		grid-template-columns: repeat(3, 1fr);
 	}
 }
 
