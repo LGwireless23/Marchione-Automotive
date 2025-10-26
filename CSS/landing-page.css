@@ -460,13 +460,6 @@ body {
 	transition: all 0.3s ease;
 }
 
-.yelp {
-	font-size: 1.1rem;
-	color: var(--muted);
-	margin-top: .75rem;
-	display: block;
-}
-
 /* When expanded, show full text */
 .review-item.expanded .review-text {
 	display: block;
@@ -498,7 +491,169 @@ body {
 	display: none;
 }
 
+/* ---------- FOOTER -----------*/
+.footer-center {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
 
+.footer-container {
+	background-color: #EAEBEF;
+	width: 100%;
+}
+
+.footer-left-justified {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	padding: 2rem 3rem;
+}
+
+/* CONTACT */
+
+.footer-contact {}
+
+.contact-header {
+	font-size: 2.5rem;
+	margin: 2rem 0 1.3rem 2.3rem;
+}
+
+.contact-body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: .9rem;
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+.contact-item {}
+
+.contact-item:hover {
+	color: var(--muted);
+	text-decoration: none;
+}
+
+.contact-body svg {
+	width: 30px;
+	height: 30px;
+}
+
+#contact-location svg {
+	margin-left: -4px;
+	margin-right: 10px;
+}
+
+#contact-phone svg {
+	margin-left: -1px;
+	margin-right: 7px;
+}
+
+#contact-email svg {
+	margin-right: 6px;
+}
+
+/* HOURS */
+
+.footer-hours {
+	margin-left: 2.2rem;
+}
+
+.hours-header {
+	font-size: 2.5rem;
+	margin: 1rem 0 1.3rem 0;
+}
+
+.hours-body {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;
+	gap: .2rem;
+	font-size: 1.2rem;
+	margin-bottom: 2rem;
+}
+
+/* CTA BUTTON */
+
+.footer-cta-container {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	max-width: 320px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 2rem;
+}
+
+.footer-cta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	white-space: nowrap;
+	width: 100%;
+	font-size: 1.2rem;
+	font-weight: 400;
+	background-color: var(--brand-dark);
+	color: var(--bg);
+	padding: 0.45rem 0.9rem;
+	height: 2.9rem;
+	border-radius: 7px;
+	transition: background-color 0.2s ease, transform 0.12s ease;
+}
+
+.footer-cta:hover {
+	color: var(--brand-dark);
+	background-color: var(--muted);
+	font-weight: 500;
+	transform: translateY(-1px);
+	text-decoration: none;
+}
+
+.footer-logo {
+	max-width: 320px;
+	margin-bottom: 1.5rem;
+}
+
+/* SOCIALS */
+
+.social-container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.social-container svg {
+	width: 50px;
+	height: 50px;
+}
+
+.social-container svg:hover {
+	color: var(--muted);
+}
+
+
+/* COPYRIGHT & PRIVACY */
+.sub-footer {
+	background-color: var(--bg);
+	width: 100%;
+	text-align: center;
+	padding: 1.5rem 0 1rem 0;
+}
+
+.privacy-policy {
+	font-weight: 300;
+	font-size: 15px;
+}
+
+.privacy-policy:hover {
+	font-weight: 300;
+	color: var(--muted);
+	text-decoration: none;
+}
 
 
 
