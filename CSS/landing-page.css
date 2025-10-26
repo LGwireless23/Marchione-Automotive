@@ -515,8 +515,8 @@ body {
 
 /* CONTACT */
 .contact-header {
-	font-size: clamp(2.5rem, 4vw, 2.7rem);
-	margin: 2rem 0 1.3rem 2.3rem;
+	font-size: clamp(2.2rem, 4vw, 2.7rem);
+	margin: 2rem 0 1.3rem 2.1rem;
 }
 
 .contact-body {
@@ -567,7 +567,7 @@ body {
 }
 
 .hours-header {
-	font-size: clamp(2.5rem, 4vw, 2.7rem);
+	font-size: clamp(2.2rem, 4vw, 2.7rem);
 	margin: 1rem 0 1.3rem 0;
 }
 
