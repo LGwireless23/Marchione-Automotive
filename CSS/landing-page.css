@@ -86,16 +86,13 @@ body {
 	left: 0;
 	width: 75%;
 	max-width: 320px;
+	height: 100vh;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.5rem;
 	padding: 1rem 1.25rem;
-	background-color: var(--nav-links-trans);
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
+	background-color: var(--bg);
 	border-top: none;
-	border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-	box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 16px;
 	opacity: 0;
 	transform: translateX(-15px);
 	pointer-events: none;
@@ -108,7 +105,6 @@ body {
 	transform: translateX(0px);
 	pointer-events: auto;
 	display: flex;
-	max-height: 400px;
 }
 
 /* closing class for graceful hide */
@@ -132,6 +128,28 @@ body {
 /* hover */
 .nav-links a:hover {
 	color: var(--muted);
+}
+
+.nav-contact-icons-container {
+	display: flex;
+	justify-content: center;
+	margin-top: auto;
+	padding-bottom: 4.5rem;
+}
+
+.nav-contact-icons {
+	display: flex;
+	gap: 1.1rem;
+}
+
+.nav-contact-icons svg {
+	height: 30px;
+	width: 30px;
+}
+
+#nav-email svg {
+	height: 37px;
+	width: 37px;
 }
 
 /* ---------- Hamburger button (mobile) ---------- */
@@ -735,6 +753,7 @@ a {
 		align-items: center;
 		justify-content: flex-end;
 		gap: 1.25rem;
+		height: auto;
 		padding: 0;
 		border: none;
 		box-shadow: none;
@@ -750,6 +769,10 @@ a {
 		padding: 0;
 		font-size: 17px;
 		font-weight: 500;
+	}
+
+	.nav-contact-icons-container {
+		display: none;
 	}
 
 	/* show CTA button on tablet+ */
