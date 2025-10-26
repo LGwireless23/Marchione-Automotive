@@ -563,7 +563,7 @@ body {
 /* HOURS */
 
 .footer-hours {
-	margin-left: 2.2rem;
+	margin: 0 0 1.5rem 2.2rem;
 }
 
 .hours-header {
@@ -587,7 +587,6 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: flex-start;
-	max-width: 320px;
 	width: 100%;
 	height: auto;
 	margin-bottom: 2rem;
@@ -619,7 +618,6 @@ body {
 }
 
 .footer-logo img {
-	max-width: 320px;
 	margin-bottom: 1.5rem;
 }
 
