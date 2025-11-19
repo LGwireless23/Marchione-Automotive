@@ -84,8 +84,7 @@ body {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 75%;
-	max-width: 320px;
+	width: 85%;
 	height: 100vh;
 	flex-direction: column;
 	align-items: flex-start;
@@ -94,9 +93,9 @@ body {
 	background-color: var(--bg);
 	border-top: none;
 	opacity: 0;
-	transform: translateX(-15px);
+	transform: translateX(-100%);
 	pointer-events: none;
-	transition: opacity 300ms, transform 300ms cubic-bezier(.2, .9, .2, 1);
+	transition: opacity 500ms, transform 500ms cubic-bezier(.2, .9, .2, 1);
 }
 
 /* open */
@@ -110,7 +109,7 @@ body {
 /* closing class for graceful hide */
 .nav-links.closing {
 	opacity: 0;
-	transform: translateX(-15px);
+	transform: translateX(-100%);
 	pointer-events: none;
 }
 
@@ -133,6 +132,7 @@ body {
 .nav-contact-icons-container {
 	display: flex;
 	justify-content: center;
+	margin-top: 1rem;
 }
 
 .nav-contact-icons {
@@ -743,8 +743,7 @@ a {
 
 	/* mobile dropdown width slightly larger */
 	.nav-links {
-		width: 66%;
-		max-width: 463px;
+		width: 100%;
 	}
 }
 
