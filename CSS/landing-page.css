@@ -1,9 +1,10 @@
 /* ---------- :root / variables ---------- */
 :root {
 	--brand-dark: #14172E;
-	--bg: #FBFCFF;
+	--bg: #f6f8f9;
+	--white: #ffffff;
 	--muted: #8e8f98;
-	--nav-trans: rgba(153, 153, 155, 0.3);
+	--nav-trans: rgba(153, 153, 155, 0);
 	--nav-links-trans: rgba(251, 252, 255, 0.88);
 	--nav-solid: rgba(251, 252, 255, 1);
 	--nav-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -26,7 +27,7 @@ html, body {
 body {
 	font-family: 'Akshar', sans-serif;
 	color: var(--brand-dark);
-	background-color: var(--bg);
+	background-color: var(--nav-solid);
 	width: 100%;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -84,13 +85,13 @@ body {
 	position: absolute;
 	top: 100%;
 	left: 0;
-	width: 85%;
+	width: 100%;
 	height: 100vh;
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 0.5rem;
 	padding: 1rem 1.25rem;
-	background-color: var(--bg);
+	background-color: var(--nav-solid);
 	border-top: none;
 	opacity: 0;
 	transform: translateX(-100%);
@@ -269,7 +270,7 @@ body {
 }
 
 .intro-body {
-	font-size: clamp(1.1rem, 2vw, 1.25rem);
+	font-size: 1.25rem;
 	line-height: 1.6;
 }
 
@@ -319,7 +320,7 @@ body {
 }
 
 .services-item {
-	background: var(--bg);
+	background: var(--white);
 	padding: 3rem;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -332,7 +333,6 @@ body {
 	text-decoration: none !important;
 	gap: .5rem;
 	color: inherit;
-	max-width: 350px;
 	min-height: 270px;
 	width: 100%;
 	margin: 0 auto;
@@ -398,7 +398,7 @@ body {
 }
 
 .review-item {
-	background: var(--bg);
+	background: var(--white);
 	padding: 2rem;
 	border-radius: 8px;
 	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -517,7 +517,7 @@ body {
 
 /* ---------- FOOTER -----------*/
 .footer-container {
-	background-color: #EAEBEF;
+	background-color: var(--bg);
 	width: 100%;
 }
 
@@ -542,7 +542,6 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	width: 100%;
 }
 
 /* CONTACT */
@@ -557,7 +556,7 @@ body {
 	align-items: flex-start;
 	justify-content: center;
 	gap: .9rem;
-	font-size: clamp(1.2rem, 4vw, 1.4rem);
+	font-size: 1.2rem;
 	margin-bottom: 2rem;
 }
 
@@ -609,14 +608,14 @@ body {
 	align-items: flex-start;
 	justify-content: center;
 	gap: .2rem;
-	font-size: clamp(1.2rem, 4vw, 1.4rem);
+	font-size: 1.2rem;
 	margin-bottom: 2rem;
 }
 
 /* CTA BUTTON */
 
 .cta-logo-socials-container {
-	padding: 0 2.5rem;
+	padding: 0 2.5rem 4rem 2.5rem;
 }
 
 .footer-cta-container {
@@ -625,7 +624,7 @@ body {
 	justify-content: flex-start;
 	width: 100%;
 	height: auto;
-	margin-bottom: 2rem;
+	margin-bottom: 1rem;
 }
 
 .footer-cta {
@@ -640,7 +639,7 @@ body {
 	color: var(--bg);
 	padding: 0.75rem 1.5rem;
 	height: 2.9rem;
-	border-radius: 7px;
+	border-radius: 12px;
 	transition: background-color 0.2s ease, transform 0.12s ease;
 	text-decoration: none;
 }
@@ -654,6 +653,7 @@ body {
 }
 
 .footer-logo img {
+	height: 4rem;
 	margin-bottom: 1.5rem;
 }
 
@@ -666,13 +666,13 @@ body {
 .social-container {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 	gap: 1rem;
 }
 
 .social-container svg {
-	width: 50px;
-	height: 50px;
+	width: 40px;
+	height: 40px;
 }
 
 .social-container svg:hover {
@@ -741,11 +741,11 @@ a {
 		margin: 0px auto;
 	}
 
-	/* mobile dropdown width slightly larger */
-	.nav-links {
-		width: 100%;
+	.intro, .services-item, .review-item {
+		width: 90%;
 	}
 }
+
 
 /* ------ tablets (≥768px) -> show full nav, hide hamburger ------ */
 @media (min-width: 768px) {
@@ -790,6 +790,10 @@ a {
 
 	.nav-contact-icons-container {
 		display: none;
+	}
+
+	.intro, .services-item, .review-item {
+		width: 100%;
 	}
 
 	/* show CTA button on tablet+ */
@@ -896,11 +900,15 @@ a {
 		margin-bottom: 3rem;
 	}
 
+	.footer-center {
+		padding-bottom: 0;
+	}
+
 	.footer-left-justified {
 		flex-direction: row;
 		justify-content: space-between;
 		gap: 2rem;
-		padding: 2.5rem;
+		padding: 2.5rem 2.5rem 0 2.5rem;
 	}
 
 	.contact-header {
@@ -932,11 +940,7 @@ a {
 		font-size: clamp(.9rem, 2vw, 1.1rem);
 	}
 
-	.footer-cta-container {
-		display: none;
-	}
-
-	.footer-logo-socials-container {
+	.cta-master-container {
 		display: none;
 	}
 
@@ -980,8 +984,7 @@ a {
 
 	/* more spacing on navbar links */
 	.nav-links {
-		gap: 1.5rem;
-		width: 100%;
+		gap: 3rem;
 	}
 
 	.nav-links a {
