@@ -525,17 +525,17 @@ body {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 }
 
 .footer-center {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	align-items: flex-start;
+	justify-content: flex-start;
 	max-width: 1250px;
 	width: 100%;
-	padding: 2rem 1.25rem;
+	padding: 2rem 3rem;
 }
 
 .footer-left-justified {
@@ -546,8 +546,8 @@ body {
 
 /* CONTACT */
 .contact-header {
-	font-size: clamp(2.2rem, 4vw, 2.7rem);
-	margin: 2rem 0 1.3rem 2.1rem;
+	font-size: clamp(1.7rem, 4vw, 2.7rem);
+	margin: 2rem 0 1.3rem 0;
 }
 
 .contact-body {
@@ -555,8 +555,8 @@ body {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	gap: .9rem;
-	font-size: 1.2rem;
+	gap: .2rem;
+	font-size: 1rem;
 	margin-bottom: 2rem;
 }
 
@@ -571,34 +571,14 @@ body {
 	text-decoration: none;
 }
 
-.contact-body svg {
-	width: 30px;
-	height: 30px;
-	flex-shrink: 0;
-}
-
-#contact-location svg {
-	margin-left: -4px;
-	margin-right: 10px;
-}
-
-#contact-phone svg {
-	margin-left: -1px;
-	margin-right: 7px;
-}
-
-#contact-email svg {
-	margin-right: 9px;
-}
-
 /* HOURS */
 
 .footer-hours {
-	margin: 0 0 1.5rem 2.2rem;
+	margin: 0 0 1.5rem 0;
 }
 
 .hours-header {
-	font-size: clamp(2.2rem, 4vw, 2.7rem);
+	font-size: clamp(1.7rem, 4vw, 2.7rem);
 	margin: 1rem 0 1.3rem 0;
 }
 
@@ -608,8 +588,7 @@ body {
 	align-items: flex-start;
 	justify-content: center;
 	gap: .2rem;
-	font-size: 1.2rem;
-	margin-bottom: 2rem;
+	font-size: 1rem;
 }
 
 /* CTA BUTTON */
@@ -668,11 +647,12 @@ body {
 	align-items: center;
 	justify-content: flex-start;
 	gap: 1rem;
+	margin-left: .4rem;
 }
 
 .social-container svg {
-	width: 40px;
-	height: 40px;
+	width: 35px;
+	height: 35px;
 }
 
 .social-container svg:hover {
@@ -839,33 +819,12 @@ a {
 		padding: 2.5rem;
 		display: flex;
 		align-items: flex-start;
-		margin-top: 2rem;
 	}
 
 	.intro-container {
 		flex: 1;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.intro-body {
-		max-width: 70ch;
-	}
-
-	.map-frame {
-		display: flex;
-		flex: 1;
-		min-width: 300px;
-		align-self: stretch;
-		justify-content: flex-end;
-	}
-
-	.map-content {
-		width: 100%;
-		height: 100%;
-		min-height: 400px;
-		border-radius: 8px;
-		/* Optional: rounded corners */
 	}
 
 	.services {
@@ -914,17 +873,10 @@ a {
 	.contact-header {
 		font-size: clamp(1.5rem, 2vw, 1.8rem);
 		margin-top: 5px;
-		margin-left: 29px;
 	}
 
 	.contact-body {
 		font-size: clamp(.9rem, 2vw, 1.1rem);
-		gap: .6rem;
-	}
-
-	.contact-body svg {
-		height: 24px;
-		width: 24px;
 	}
 
 	.footer-hours {
@@ -982,9 +934,8 @@ a {
 		height: 45px;
 	}
 
-	/* more spacing on navbar links */
 	.nav-links {
-		gap: 3rem;
+		gap: 2.5rem;
 	}
 
 	.nav-links a {
@@ -1010,15 +961,27 @@ a {
 		display: none;
 	}
 
+	.intro, .services, .reviews {
+		margin-top: 5rem;
+	}
+
 	.intro {
 		padding: 2.5rem 3rem;
-		gap: 3rem;
-		margin-top: 3rem;
+	}
+
+	.map-frame {
+		display: flex;
+		flex: 1;
+		min-width: 300px;
+		align-self: stretch;
+		justify-content: flex-end;
 	}
 
 	.map-content {
+		width: 100%;
+		height: 100%;
 		min-height: 400px;
-		max-width: 90%;
+		border-radius: 8px;
 	}
 
 	.services {
@@ -1031,6 +994,7 @@ a {
 
 	.reviews {
 		padding: 3rem 2.5rem;
+		margin-bottom: 5rem;
 	}
 
 	.reviews-container {
@@ -1060,6 +1024,16 @@ a {
 @media (min-width: 1200px) {
 	.nav-container {
 		padding: 1.25rem 2.5rem;
+	}
+
+	.intro {
+		padding: 2.5rem 3rem;
+		gap: 3rem;
+		margin-top: 3rem;
+	}
+
+	.intro-body {
+		max-width: 70ch;
 	}
 
 	.reviews {
